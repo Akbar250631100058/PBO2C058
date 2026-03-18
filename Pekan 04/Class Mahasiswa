@@ -1,0 +1,44 @@
+class Mahasiswa {
+    // Modifier: private
+    private String nama;
+    private String nim;
+    private double nilai;
+
+    // Constructor
+    public Mahasiswa(String nama, String nim, double nilai) {
+        this.nama = nama;
+        this.nim = nim;
+        this.nilai = nilai;
+    }
+
+    // Method
+    public void tampilkanData() {
+        System.out.println("Nama : " + this.nama);
+        System.out.println("NIM  : " + this.nim);
+        System.out.println("Nilai: " + this.nilai);
+    }
+
+    public void setNilai(double nilai) {
+        this.nilai = nilai;
+    }
+
+    public double getNilai() {
+        return this.nilai;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Data sudah diganti
+        Mahasiswa mhs1 = new Mahasiswa(
+            "Mohammad Bahtiar Ilham Akbar",
+            "250631100058",
+            85.5
+        );
+
+        mhs1.tampilkanData();
+
+        mhs1.setNilai(90);
+        System.out.println("Nilai setelah diubah: " + mhs1.getNilai());
+    }
+}
